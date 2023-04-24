@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] string currentScene;
     private bool reachEnd;
 
+    private bool restartGame;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +41,10 @@ public class PlayerController : MonoBehaviour
         moveHorizontal.Enable();
     }
 
+
+    public void setRestartGame(bool value) {
+        restartGame = value;
+    }
     private void OnDisable()
     {
         moveHorizontal.Disable();
@@ -58,19 +64,17 @@ public class PlayerController : MonoBehaviour
     }
     private void OnBecameInvisible()
     {
-        if (!reachEnd)
+        if (!reachEnd && !restartGame)
         {
             Debug.Log("Loading scene: " + currentScene);
             SceneManager.LoadScene(currentScene);
         }
     }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject && other.gameObject.tag == "NextLevel")
         {
             reachEnd = true;
         }
-
     }
 }
