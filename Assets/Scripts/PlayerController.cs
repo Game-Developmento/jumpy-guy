@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         float horizontal = moveHorizontal.ReadValue<float>();
@@ -66,10 +65,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("aa");
-        if (other.gameObject.activeSelf && other.tag == "NextLevel")
+        if (other.gameObject && other.gameObject.tag == "NextLevel")
         {
             reachEnd = true;
         }

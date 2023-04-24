@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     [SerializeField] string nextScene;
-    private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
         SceneManager.LoadScene(nextScene);
     }
+
 }

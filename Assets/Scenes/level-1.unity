@@ -1531,6 +1531,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c02e654000819418b46b8874d993e4, type: 3}
+--- !u!1 &695124690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2080082031314232083, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
+  m_PrefabInstance: {fileID: 961195790945352911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695124694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695124690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76539f3224e59f24eac3b85355497b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: level-2
 --- !u!1001 &815517314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3173,19 +3191,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1129490415998478724, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
       propertyPath: m_Size.x
-      value: 0.4738024
+      value: 0.32652336
       objectReference: {fileID: 0}
     - target: {fileID: 1129490415998478724, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
       propertyPath: m_Size.y
-      value: 0.49760464
+      value: 0.3628171
       objectReference: {fileID: 0}
     - target: {fileID: 1129490415998478724, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
       propertyPath: m_Offset.x
-      value: -0.0008813143
+      value: 0.0058131814
       objectReference: {fileID: 0}
     - target: {fileID: 1129490415998478724, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
       propertyPath: m_Offset.y
-      value: 0.071967915
+      value: 0.00457415
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129490415998478724, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129490415998478724, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
+      propertyPath: m_AutoTiling
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2080082031314232083, guid: bdce44f6ea1e8fd469a1cc9924658f72, type: 3}
       propertyPath: m_Name
