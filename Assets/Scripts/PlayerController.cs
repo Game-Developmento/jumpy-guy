@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 10.0f;
 
-    InputAction moveHorizontal;
+    [SerializeField] InputAction moveHorizontal;
 
     public Rigidbody2D rb;
     private float moveX;
@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void setRestartGame(bool value) {
+    public void setRestartGame(bool value)
+    {
         restartGame = value;
     }
     private void OnDisable()
@@ -75,6 +76,10 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject && other.gameObject.tag == "NextLevel")
         {
             reachEnd = true;
+        }
+        else if (other.gameObject && other.gameObject.tag == "Spikes")
+        {
+            SceneManager.LoadScene(currentScene);
         }
     }
 }

@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
             if (playerC)
             {
                 playerC.setRestartGame(true);
-                SceneManager.LoadScene("level-1");
             }
         }
+        SceneManager.LoadScene("level-1");
     }
 
 }

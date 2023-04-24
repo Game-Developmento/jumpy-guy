@@ -805,6 +805,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  moveHorizontal:
+    m_Name: Move Horizontal
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d5769ea9-fbc2-4713-9ed3-288263c04c7b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1DAxis
+      m_Id: 248cf775-6fb1-44a3-accc-2448c885d63b
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Horizontal
+      m_Flags: 4
+    - m_Name: Positive
+      m_Id: 71abd0b3-4fb3-4883-8a6b-a85b756ae3be
+      m_Path: <Keyboard>/rightArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Horizontal
+      m_Flags: 8
+    - m_Name: Negative
+      m_Id: 4d2a0d2b-ae9b-4706-b89d-a7deeae03435
+      m_Path: <Keyboard>/leftArrow
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move Horizontal
+      m_Flags: 8
+    m_Flags: 0
   rb: {fileID: 0}
   currentScene: level-2
 --- !u!50 &370259361
