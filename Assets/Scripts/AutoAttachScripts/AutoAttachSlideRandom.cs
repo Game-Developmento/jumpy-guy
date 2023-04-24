@@ -5,6 +5,8 @@ using UnityEngine;
 public class AutoAttachSlideRandom : MonoBehaviour
 {
     float randomNumber;
+
+    [SerializeField] int probability;
     List<GameObject> platformsWithSlideMovement = new List<GameObject>();
 
     private void Start()
@@ -13,7 +15,7 @@ public class AutoAttachSlideRandom : MonoBehaviour
         foreach (GameObject platform in platforms)
         {
             randomNumber = Random.Range(0, 100);
-            if (randomNumber % 7 == 0)
+            if (randomNumber % probability == 0)
             {
                 platform.AddComponent<SlideMovement>();
                 platformsWithSlideMovement.Add(platform);

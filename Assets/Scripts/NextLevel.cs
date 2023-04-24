@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) {
-        SceneManager.LoadScene("level-2");
+    [SerializeField] string nextScene;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }

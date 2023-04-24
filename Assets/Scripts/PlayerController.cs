@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     private float moveX;
+    [SerializeField] string currentScene;
+    private bool reachEnd;
 
     private void Awake()
     {
@@ -31,13 +34,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
-      private void OnEnable() {
+    private void OnEnable()
+    {
         moveHorizontal.Enable();
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         moveHorizontal.Disable();
-        
+
     }
 
     // Update is called once per frame
@@ -51,5 +56,23 @@ public class PlayerController : MonoBehaviour
         Vector2 velocity = rb.velocity;
         velocity.x = moveX;
         rb.velocity = velocity;
+    }
+    private void OnBecameInvisible()
+    {
+        if (!reachEnd)
+        {
+            Debug.Log("Loading scene: " + currentScene);
+            SceneManager.LoadScene(currentScene);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("aa");
+        if (other.gameObject.activeSelf && other.tag == "NextLevel")
+        {
+            reachEnd = true;
+        }
+
     }
 }
